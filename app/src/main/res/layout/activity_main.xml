@@ -1,24 +1,38 @@
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:gravity="center"
-    android:background="@drawable/background">
+    android:padding="0dp">
+
+    <!-- First Header (Age Calculator) -->
+    <TextView
+        android:id="@+id/headerAgeCalculator"
+        android:layout_width="411dp"
+        android:layout_height="74dp"
+        android:background="#03A9F4"
+        android:gravity="center"
+        android:text="Age Calculator"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 
+    <!-- TextInputEditText -->
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="108dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginBottom="50dp"
-        android:src="@drawable/img" />
+        android:paddingTop="20dp"
+        android:src="@drawable/age" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/editTextBirthdate"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         android:clickable="true"
@@ -31,31 +45,54 @@
         android:id="@+id/textInputLayoutBirthdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:boxBackgroundMode="outline"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="16dp"
+        app:boxBackgroundMode="outline" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-
+    <!-- Button -->
     <Button
         android:id="@+id/buttonCalculateAge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calculate Age"
-        android:background="#4CAF50"
-        android:textColor="#FFFFFF"
+        android:layout_width="191dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/design_default_color_primary"
         android:padding="12dp"
-        android:layout_marginBottom="16dp" />
+        android:paddingTop="35dp"
+        android:text="Calculate Age"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#673AB7"
+        android:textColorLink="#480AB6"
+        android:visibility="visible"
+        tools:visibility="visible" />
 
+    <!-- TextView Result -->
     <TextView
         android:id="@+id/textViewResult"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="18sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         android:textColor="#333333"
+        android:background="@color/white"
+        android:gravity="center"
         android:padding="16dp"
-        android:background="#FFFFFF"
-        android:layout_marginTop="16dp" />
+        android:layout_margin="20dp"
+
+    />
+
+    <TextView
+        android:id="@+id/user_greeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keep smiling and enjoying life!"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="#61BECC"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_margin="20dp" />
+
+
 
 </LinearLayout>
 
