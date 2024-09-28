@@ -90,7 +90,9 @@
         android:background="#61BECC"
         android:gravity="center"
         android:padding="16dp"
-        android:layout_margin="20dp" />
+        android:layout_margin="20dp"
+        android:visibility="gone" />
+
 
 
 

@@ -56,6 +56,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun calculateAge() {
         val birthdateString = editTextBirthdate.text.toString()
+        val userGreeting = findViewById<TextView>(R.id.user_greeting)
 
         if (birthdateString.isNotEmpty()) {
             try {
@@ -76,6 +77,7 @@ class MainActivity : AppCompatActivity() {
             } catch (e: ParseException) {
                 Log.e("CalculateAge", "Error parsing date: ${e.message}")
                 textViewResult.text = "Error calculating age."
+                userGreeting.visibility = View.GONE
             }
         } else {
             textViewResult.text = "Please select a valid birthdate."
